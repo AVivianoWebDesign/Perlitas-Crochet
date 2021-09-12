@@ -1,0 +1,257 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+  background: linear-gradient(to top, #259e3556 15%, #e2cfc5 100%, #22258598 25%);
+  background-blend-mode: lighten;
+}
+
+
+.menu{
+  list-style-type: none;
+  background-color: transparent;
+  max-width: 1000px;
+  margin: auto;
+}
+.logo {
+  font-size: 20px;
+  padding: 7.5px 5px 7.5px 0;
+  background: none;
+}
+.item {
+  padding: 5px;
+}
+.item.button {
+  padding: 9px 5px;
+}
+/* Mobile menu */
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: right;
+  background-color: transparent;
+}
+.menu li a {
+  padding: 5px 5px;
+}
+
+.toggle {
+  order: 1;
+  font-size: 5px;
+}
+.item.button {
+  order: 2;
+}
+.item {
+  order: 3;
+  width: 50%;
+  display: none;
+}
+.active .item {
+  display: block;
+}
+
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1{
+    font-size: 60px;
+    font-weight: 100;
+    margin-top: 82px;
+    margin-bottom: 73px;
+    word-break: normal;
+    text-align: center;
+}
+
+.animate__animated.animate__zoomIn {
+    --animate-duration: 2s;
+}
+
+.social-links {
+    padding: 15px;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: #6a7199;
+    padding-right: 20px;
+    font-size: 14px;
+}
+
+.img-gallery {
+    width: 80%;
+    margin: 100px auto 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 30px;
+}
+
+.img-gallery img {
+    margin-top: 8px;
+    object-position: center;
+    width: 100%;
+    height: fit-content;
+    border-radius: 50px;
+}
+
+.img-gallery img:hover {
+    transform: scale(0.8) rotate(-15deg);
+    border-radius: 20px;
+    box-shadow: 0 32px 75px rgba(668, 77, 136, 0.2);
+}
+
+.full-img {
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.815);
+    backdrop-filter: blur(5px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    border-radius: 20px;
+}
+
+.full-img img {
+    width: 90%;
+    max-width: 500px;
+    border-radius: 20px;
+}
+
+.full-img span {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+
+/* Tablet menu */
+@media all and (min-width: 700px) {
+    .menu {
+      justify-content: center;
+    }
+    .logo {
+      flex: 1;
+    }
+    .item.button {
+      width: auto;
+      order: 1;
+      display: block;
+    }
+    .toggle {
+      flex: 1;
+      text-align: right;
+      order: 2;
+    }
+    /* Button up from tablet screen */
+    .menu li.button a {
+      padding: 10px 15px;
+      margin: 5px 0;
+    }
+    .button a {
+      background: #e6e6e600;
+      border: 1px rgba(255, 255, 255, 0) solid;
+    }
+    .button.secondary {
+      border: 0;
+    }
+    .button.secondary a {
+      background: transparent;
+      border: 1px #ffffff00 solid;
+    }
+    .button a:hover {
+      text-decoration: none;
+    }
+    .button:not(.secondary) a:hover {
+      background: rgba(255, 255, 255, 0);
+      border-color: rgba(255, 255, 255, 0);
+    }
+  }
+  /* Desktop menu */
+  @media all and (min-width: 960px) {
+    .menu {
+      align-items: right;
+      flex-wrap:nowrap;
+      background: #ffffff00;
+    }
+    .logo {
+      order: 0;
+    }
+    .item {
+      order: 1;
+      position: relative;
+      display: block;
+      width: auto;
+    }
+    .button {
+      order: 2;
+    }
+    .menu-active .menu {
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 68px;
+      background: rgba(255, 252, 252, 0);
+    }
+    .toggle {
+      display: none;
+    }
+    .menu-active {
+      border-radius: 0;
+    }
+  }
+  
+@media (max-width: 952px) {
+    .logo {
+        display: none;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 858px) {
+
+    ul {
+        
+        width: 6%;
+        height: 50vh;
+        background: #ffffff00 rgba(255, 255, 255, 0)ff;
+        top: 80px;
+        text-align: center;
+        transition: all .5s;
+
+    }
+
+    nav ul li {
+        margin: 5px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    nav ul li a.btn:hover {
+        background: none;
+        color: #ffffff00
+    }
+
+    h1 {
+        font-size-adjust: inherit;
+        fallback: initial;
+    }
+}
