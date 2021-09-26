@@ -1,0 +1,223 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background: linear-gradient(to top, #259e3556 15%, #e2cfc5 100%, #22258598 25%);
+  background-blend-mode: lighten;
+}
+
+.container{
+  height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  padding-left: 5%;
+  padding-right: 5%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.navbar {
+  font-size: 18px;
+  padding-bottom: 10px;
+}
+
+.main-nav {
+  list-style-type: none;
+  display: none;
+}
+
+.nav-links {
+  text-decoration: none;
+  color: rgb(12, 12, 12);
+}
+
+.main-nav li {
+  text-align: center;
+  margin: 15px auto;
+}
+
+.navbar-toggle {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  color: rgba(26, 25, 25, 0.8);
+  font-size: 24px;
+}
+
+.active {
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .navbar {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 0;
+      height: 70px;
+      align-items: center;
+  }
+
+  .main-nav {
+      display: flex;
+      margin-right: 30px;
+      flex-direction: row;
+      justify-content: flex-end;
+  }
+
+  .main-nav li {
+      margin: 0;
+  }
+
+  .nav-links {
+      margin-left: 40px;
+  }
+
+  .navbar-toggle {
+      display: none;
+  }
+
+  .nav-links:hover {
+      color: rgba(255, 255, 255, 1);
+  }
+}
+  /* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 60px;
+  font-weight: 100;
+  margin-top: 82px;
+  margin-bottom: 73px;
+  word-break: normal;
+  text-align: center;
+}
+.animate__animated.animate__zoomIn {
+  --animate-duration: 2s;
+}
+
+.row {
+  margin: 10px -16px;
+}
+
+  /* Add padding BETWEEN each column */
+.row,
+.row> .column {
+  padding: 8px;
+}
+
+  /* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  display: none;
+    /* Hide all elements by default */
+}
+.column img {
+  margin-top: 8px;
+  object-position: center;
+  width: 100%;
+  height: auto;
+  border-radius: 50px;
+  
+}
+
+  /* Clear floats after rows */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+  /* Content */
+.content {
+  font-size: 6px;
+  font-weight: 100;
+  margin-top: 8px;
+  margin-bottom: 7px;
+  word-break: normal;
+  text-align: center;
+  border-radius: 50px;
+}
+/* The overlay effect - lays on top of the container and over the image */
+.overlay .img {
+  position: center;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.897); /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  transition: .3s ease;
+  opacity:0;
+  color: rgb(14, 13, 13);
+  font-size: 5px;
+  padding: 2px;
+  text-align: center;
+  border-radius: 50px;
+  display: none;
+}
+
+/* When you mouse over the container, fade in the overlay title */
+.container .overlay .img:hover {
+  transform: scale(0.8) rotate(-15deg);
+  border-radius: 50px;
+  box-shadow: 0 32px 75px rgba(668, 77, 136, 0.2);
+}
+.content h4{
+  font-size: 15px;
+  color: #fefeff;
+  word-break: normal;
+  text-align: center;
+}
+.content p{
+  font-size: 10px;
+  color: #ffffff;
+}
+
+  /* The "show" class is added to the filtered elements */
+.show {
+    display: block;
+}
+
+  /* Style the buttons */
+.btn {
+  display: inline-block;
+  height: auto;
+  border-radius: 40px;
+  background-color: #6a7199b9;
+  padding: 5px 25px;
+ 
+
+  color: #ffffff;
+
+  cursor: pointer;
+}
+.btn:hover {
+  box-shadow: 3px 8px 22px rgba(72, 83, 134, 0.904);
+  transition: 0.1s;
+}
+
+.social-links{
+  padding: 5px;
+}
+.social-links a{
+  text-decoration: none;
+  color: #6a7199;
+  padding-right: 20px;
+  font-size: 15px;
+}
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}

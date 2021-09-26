@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Perlita's Crochet Collections</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Perlita's Crochet">
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="style4.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+
+
+
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <span class="navbar-toggle" id="js-navbar-toggle">
+            <i class="fas fa-bars"></i>
+        </span>
+        <a img src="images/NEWlogo_.png" class="logo"></a>
+        <ul class="main-nav" id="js-menu">
+            <li>
+                <a href="index.html" class="nav-links">Home</a>
+            </li>
+            <li>
+                <a href="crochetcollections.html" class="nav-links">Crochet Collections</a>
+            </li>
+            <li>
+                <a href="mecontact.html" class="nav-links">Pricing</a>
+            </li>
+            <li>
+                <a href="contactme.html" class="nav-links">Contact Us</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="main">
+            <h1 class="animate__animated animate__zoomIn">Crochet Collections</h1>
+            <hr>
+
+            <div class="social-links">
+                <a href="https://www.instagram.com/perlitas_crochet/"><i class="fab fa-instagram"></i>INSTAGRAM</a>
+            </div><br>
+        </div>
+
+        <div class="full-img" id="fullImgBox">
+            <img src="images/Amirigumi 1.JPG" id="fullImg">
+            <span onclick="closeFullImg()">X</span>
+        </div>
+
+        <div class="img-gallery">
+            <img src="images/Amirigumi 2.JPG" onclick="openFullImg(this.src)">
+            <img src="images/Amirigumi 3.jpg" onclick="openFullImg(this.src)">
+            <img src="images/Amirigumi 4.jpg" onclick="openFullImg(this.src)">
+            <img src="images/Amirigumi 5.jpg" onclick="openFullImg(this.src)">
+            <img src="images/Amirigumi 6.JPG" onclick="openFullImg(this.src)">
+            <img src="images/CoinPurses 1.JPG" onclick="openFullImg(this.src)">
+            <img src="images/CoinPurses 2.JPG" onclick="openFullImg(this.src)">
+            <img src="images/CoinPurses 3.JPG" onclick="openFullImg(this.src)">
+            <img src="images/CoinPurses 4.JPG" onclick="openFullImg(this.src)">
+            <img src="images/CoinPurses 5.JPG" onclick="openFullImg(this.src)">
+            <img src="images/CoinPurses 6.jpg" onclick="openFullImg(this.src)">
+            <img src="images/CoinPurses 7.jpg" onclick="openFullImg(this.src)">
+            <img src="images/CoinPurses 8.jpg" onclick="openFullImg(this.src)">
+            <img src="images/CoinPurses 9.jpg" onclick="openFullImg(this.src)">
+            <img src="images/CoinPurses 10.jpg" onclick="openFullImg(this.src)">
+            <img src="images/CoinPurses 11.jpg" onclick="openFullImg(this.src)">
+            <img src="images/CoinPurses 12.jpg" onclick="openFullImg(this.src)">
+            <img src="images/CoinPurses 13.jpg" onclick="openFullImg(this.src)">
+            <img src="images/CoinPurses 14.jpg" onclick="openFullImg(this.src)">
+            <img src="images/CoinPurses 15.jpg" onclick="openFullImg(this.src)">
+            <img src="images/CoinPurses 16.JPG" onclick="openFullImg(this.src)">
+            <img src="images/misc 1.jpg" onclick="openFullImg(this.src)">
+            <img src="images/misc 2.jpg" onclick="openFullImg(this.src)">
+            <img src="images/misc 3.jpg" onclick="openFullImg(this.src)">
+            <img src="images/misc 4.jpg" onclick="openFullImg(this.src)">
+            <img src="images/misc 5.jpg" onclick="openFullImg(this.src)">
+            <img src="images/misc 6.jpg" onclick="openFullImg(this.src)">
+            <img src="images/misc 7.jpg" onclick="openFullImg(this.src)">
+            <img src="images/misc 8.jpg" onclick="openFullImg(this.src)">
+
+
+        </div>
+
+
+    </div>
+<script>
+let mainNav = document.getElementById('js-menu');
+let navBarToggle = document.getElementById('js-navbar-toggle');
+
+navBarToggle.addEventListener('click', function () {
+    
+    mainNav.classList.toggle('active');
+});
+</script>
+
+    <script>
+        var fullImgBox = document.getElementById("fullImgBox");
+        var fullImg = document.getElementById("fullImg");
+
+        function openFullImg(pic) {
+            fullImgBox.style.display = "flex";
+            fullImg.src = pic;
+        }
+        function closeFullImg() {
+            fullImgBox.style.display = "none";
+        }
+
+    </script>
+
+
+</body>
+
+</html>
